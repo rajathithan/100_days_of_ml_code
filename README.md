@@ -9,3 +9,8 @@
  
 **Today's Progress** : Setup of virtualenv and installation of numpy,scipy, scikit-learn and matplotlib
 
+
+## Day 2 : Jan 29 , 2019
+ 
+**Today's Progress** : 
+Data Preprocessing - Mean, Scaling, Normalization, Binarization
