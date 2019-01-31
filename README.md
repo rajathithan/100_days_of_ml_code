@@ -15,3 +15,9 @@
 **Today's Progress** : 
 Data Preprocessing - Mean, Scaling, Normalization, Binarization
 Data Preprocessing - labelEncoder and oneHotEncoder
+
+
+## Day 3 : Jan 31 , 2019
+ 
+**Today's Progress** : 
+Data Preprocessing - Label Encoding , OneHotEncoding
