@@ -14,3 +14,4 @@
  
 **Today's Progress** : 
 Data Preprocessing - Mean, Scaling, Normalization, Binarization
+Data Preprocessing - labelEncoder and oneHotEncoder
