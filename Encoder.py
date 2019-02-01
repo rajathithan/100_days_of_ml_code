@@ -17,8 +17,10 @@ print("\n The Distinct values are :",list(lencoder.classes_))
 print("\n The Integer values are :",lencoder.transform(ldata))
 
 
+
 ohdata = (["apple","chicken","brocoli"])
-# oneHotEncoder
+# oneHotEncoder - converting categorical values into binary values
+
 ohencoder = preprocessing.OneHotEncoder()
 xdata = list(enumerate(ohdata))
 ydata = np.array(xdata)
@@ -27,7 +29,6 @@ cdata = ydata[:,i]
 print("\nCategorical Data for one hot encoder: \n",cdata)
 
 ohencoder.fit(cdata)
-
 # The binary values for each category is created 
 print("\n The Binary values are :\n",ohencoder.transform(cdata).toarray())
 

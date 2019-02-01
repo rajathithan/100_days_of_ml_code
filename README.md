@@ -21,3 +21,9 @@ Data Preprocessing - labelEncoder and oneHotEncoder
  
 **Today's Progress** : 
 Data Preprocessing - Label Encoding , OneHotEncoding
+
+
+## Day 4 : Feb 1 , 2019
+ 
+**Today's Progress** : 
+Linear regression
