@@ -27,3 +27,9 @@ Data Preprocessing - Label Encoding , OneHotEncoding
  
 **Today's Progress** : 
 Linear regression
+
+
+## Day 5 : Feb 6 , 2019
+ 
+**Today's Progress** : 
+Ridge regression

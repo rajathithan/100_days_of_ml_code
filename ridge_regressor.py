@@ -1,5 +1,8 @@
-# Linear regressor is to identify the underlying function f(x) between
-# input and the output variable. 
+# Linear regression uses ordinary least squares, which tries to minimize 
+# the squares of errors. The outliers tend to cause problems because they 
+# contribute a lot to the overall error, To avoid this, we use regularization 
+# where a penalty is imposed on the size of the coefficients. This method is 
+# called Ridge Regression
 
 import sys
 import numpy as np 
@@ -39,25 +42,25 @@ print("\nInput Testing data set:\n",x_test)
 y_test = np.array(y[num_training:])
 print("\nOutput Testing data set:\n",y_test)
 
-# Create linear regression object
-linear_regressor = linear_model.LinearRegression()
+# Create ridge regression object
+ridge_regressor = linear_model.Ridge(alpha=1.00, fit_intercept=True, max_iter=10000)
 
 # Train the model using the training sets
-linear_regressor.fit(x_train, y_train)
+ridge_regressor.fit(x_train, y_train)
 
 # Predict the training 
-y_train_pred = linear_regressor.predict(x_train)
+y_train_pred = ridge_regressor.predict(x_train)
 plt.figure()
 plt.scatter(x_train, y_train, color='green')
 plt.plot(x_train, y_train_pred, color='black', linewidth=4)
-plt.title('Linear regression - Training data')
+plt.title('Ridge regression - Training data')
 plt.show()
 
 # Predict the test 
-y_test_pred = linear_regressor.predict(x_test)
+y_test_pred = ridge_regressor.predict(x_test)
 plt.scatter(x_test, y_test, color='green')
 plt.plot(x_test, y_test_pred, color='black', linewidth=4)
-plt.title('Linear regression - Test data')
+plt.title('Ridge regression - Test data')
 plt.show()
 
 # Mean absolute error - mean absolute error (MAE) is a measure of difference between 
@@ -92,3 +95,4 @@ print("\nExplained variance score =", round(sm.explained_variance_score
 # model. The best possible score is 1.0, and the values can be negative as well.
 print("\nR2 score =", round(sm.r2_score
 (y_test, y_test_pred), 2))
+
