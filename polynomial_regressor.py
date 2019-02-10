@@ -1,12 +1,12 @@
-# Linear regression uses ordinary least squares, which tries to minimize 
-# the squares of errors. The outliers tend to cause problems because they 
-# contribute a lot to the overall error, To avoid this, we use regularization 
-# where a penalty is imposed on the size of the coefficients. This method is 
-# called Ridge Regression
+# polynomial regressor is used when you need to capture the natural 
+# curve to attain a model with high accuracy, but it adds computational constraints
+# to achieve that accuracy , It is slow compared to the linear regression.
+# Use this only when you want to achieve high accuracy.
 
 import sys
 import numpy as np 
 from sklearn import linear_model
+from sklearn.preprocessing import PolynomialFeatures
 from sklearn import metrics as sm
 from matplotlib import pyplot as plt
 
@@ -42,31 +42,36 @@ print("\nInput Testing data set:\n",x_test)
 y_test = np.array(y[num_training:])
 print("\nOutput Testing data set:\n",y_test)
 
-# Create ridge regression object
-# alpha - regularization , fit_intercept = to calculate the intercept of the model
-# max_inter = No of iterations to conjugate gradient solver
-ridge_regressor = linear_model.Ridge(alpha=1.00, fit_intercept=True, max_iter=10000)
+# Create linear regression object
+linear_regressor = linear_model.LinearRegression()
+
+
+# Create polynomial object
+polynomial = PolynomialFeatures(degree=10)
+
+# Convert x axis for a polynomial fit
+x_train_transformed = polynomial.fit_transform(x_train)
+x_test_transformed = polynomial.fit_transform(x_test)
+
 
 # Train the model using the training sets
-ridge_regressor.fit(x_train, y_train)
+linear_regressor.fit(x_train_transformed, y_train)
 
 # Predict the training 
-y_train_pred = ridge_regressor.predict(x_train)
+y_train_pred = linear_regressor.predict(x_train_transformed)
 plt.figure()
 plt.scatter(x_train, y_train, color='green')
 plt.plot(x_train, y_train_pred, color='black', linewidth=4)
-plt.title('Ridge regression - Training data')
+plt.title('polynomial regression - Training data')
 plt.show()
 
-# Train the model using the training sets
-ridge_regressor.fit(x_test, y_test)
+linear_regressor.fit(x_test_transformed, y_test)
 
-# Predict the test 
-y_test_pred = ridge_regressor.predict(x_test)
+y_test_pred = linear_regressor.predict(x_test_transformed)
 plt.figure()
 plt.scatter(x_test, y_test, color='green')
 plt.plot(x_test, y_test_pred, color='black', linewidth=4)
-plt.title('Ridge regression - Test data')
+plt.title('polynomial regression - Test data')
 plt.show()
 
 # Mean absolute error - mean absolute error (MAE) is a measure of difference between 
@@ -101,4 +106,3 @@ print("\nExplained variance score =", round(sm.explained_variance_score
 # model. The best possible score is 1.0, and the values can be negative as well.
 print("\nR2 score =", round(sm.r2_score
 (y_test, y_test_pred), 2))
-

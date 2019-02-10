@@ -53,8 +53,12 @@ plt.plot(x_train, y_train_pred, color='black', linewidth=4)
 plt.title('Linear regression - Training data')
 plt.show()
 
+# Train the model using the testing sets
+linear_regressor.fit(x_test, y_test)
+
 # Predict the test 
 y_test_pred = linear_regressor.predict(x_test)
+plt.figure()
 plt.scatter(x_test, y_test, color='green')
 plt.plot(x_test, y_test_pred, color='black', linewidth=4)
 plt.title('Linear regression - Test data')

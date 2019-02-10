@@ -33,3 +33,11 @@ Linear regression
  
 **Today's Progress** : 
 Ridge regression
+
+
+## Day 6 : Feb 10 , 2019
+ 
+**Today's Progress** : 
+Polynomial regression, Thiel-sen, Huber, RANSAC
+
+
