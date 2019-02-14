@@ -38,6 +38,11 @@ Ridge regression
 ## Day 6 : Feb 10 , 2019
  
 **Today's Progress** : 
-Polynomial regression, Thiel-sen, Huber, RANSAC
+Polynomial regression, Thiel-sen regression , Huber regression , RANSAC regression
 
+
+
+## Day 7 : Feb 14, 2019
+**Today's Progress** : 
+Decision tree regresor , Adaboost
 
