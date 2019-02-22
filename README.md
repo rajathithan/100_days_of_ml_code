@@ -44,5 +44,11 @@ Polynomial regression, Thiel-sen regression , Huber regression , RANSAC regressi
 
 ## Day 7 : Feb 14, 2019
 **Today's Progress** : 
-Decision tree regresor , Adaboost
+Decision tree regressor , Decision tree regressor with Adaboost
+
+
+## Day 8 : Feb 22, 2019
+**Today's Progress** : 
+Random forest regressor
+
 
