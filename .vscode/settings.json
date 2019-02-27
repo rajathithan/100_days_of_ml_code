@@ -1,6 +1,8 @@
 {
-    "python.linting.pylintEnabled": false,
+    "python.linting.pylintEnabled": true,
     "python.linting.banditEnabled": false,
-    "python.linting.enabled": false,
-    "python.linting.pep8Enabled": true
+    "python.linting.enabled": true,
+    "python.linting.pep8Enabled": false,
+    "python.linting.pylintPath": "C:\\Users\\c0015004\\ml\\Scripts\\pylint.exe",
+    "python.linting.pylamaEnabled": false
 }

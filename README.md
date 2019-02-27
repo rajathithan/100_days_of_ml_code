@@ -49,6 +49,10 @@ Decision tree regressor , Decision tree regressor with Adaboost
 
 ## Day 8 : Feb 22, 2019
 **Today's Progress** : 
-Random forest regressor
+Random forest regressor 
+
+## Day 9: Feb 27, 2019
+**Today's Progress** : 
+Logistic regression classification
 
 
