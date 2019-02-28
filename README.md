@@ -2,7 +2,7 @@
 
 ## Day 0 : Jan 3 , 2019
  
-**Today's Progress** : Setup of tensorflow python virtual env in my macbook is completed . Installed jupyter notebook .
+**Today's Progress** : Setup of tensorflow python virtual env in my macbook is completed . Installed jupyter notebook.
 
 
 ## Day 1 : Jan 28 , 2019
@@ -41,18 +41,27 @@ Ridge regression
 Polynomial regression, Thiel-sen regression , Huber regression , RANSAC regression
 
 
-
 ## Day 7 : Feb 14, 2019
+
 **Today's Progress** : 
 Decision tree regressor , Decision tree regressor with Adaboost
 
 
 ## Day 8 : Feb 22, 2019
+
 **Today's Progress** : 
 Random forest regressor 
 
+
 ## Day 9: Feb 27, 2019
+
 **Today's Progress** : 
 Logistic regression classification
+
+
+## Day 9: Feb 28, 2019
+
+**Today's Progress** : 
+Naive Bayes Classification
 
 
