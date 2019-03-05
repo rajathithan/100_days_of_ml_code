@@ -27,14 +27,14 @@ def plot_classifier(classifier,data,y):
     plt.figure()
     # color scheme
     # https://matplotlib.org/examples/color/colormaps_reference.html
-    plt.pcolormesh(x_values,y_values,mesh_output,cmap=plt.cm.spring)
+    plt.pcolormesh(x_values,y_values,mesh_output,cmap='spring')
     # scatter plot
     plt.scatter(data[:, 0], data[:, 1], c=y, s=80, edgecolors='black',
-    linewidth=1, cmap=plt.cm.Paired)
+    linewidth=1, cmap='Paired')
     # specify the boundaries of the figure
     plt.xlim(x_values.min(), x_values.max())
     plt.ylim(y_values.min(), y_values.max())
-    # specify the ticks on the X and Y axes
+    # specify the ticks on the X and Y axes. Labels of x and y axes
     plt.xticks((np.arange(int(min(data[:, 0])-1), int(max(data[:, 0])+1), 1.0)))
     plt.yticks((np.arange(int(min(data[:, 1])-1), int(max(data[:,1])+1), 1.0)))
     plt.show()

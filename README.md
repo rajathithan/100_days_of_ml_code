@@ -59,9 +59,13 @@ Random forest regressor
 Logistic regression classification
 
 
-## Day 9: Feb 28, 2019
+## Day 10: Feb 28, 2019
 
 **Today's Progress** : 
 Naive Bayes Classification
 
 
+## Day 11: Mar 05, 2019
+
+**Today's Progress** : 
+Confusion Matrix
